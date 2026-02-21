@@ -1,0 +1,88 @@
+#Conditionals
+x=int(input("What's x"))
+y=int(input("What's y"))
+#elif is for specific condition
+#else for last condition which is unwritten, but clear
+
+#Simple if else
+if x<y:
+    print("x is less than y")
+elif x>y:
+    print("x is greater than y")
+else:
+    print("x and y are equal")
+
+#Or we use
+if x<y or x>y:
+    print("x is not equal to y")
+else:
+    print("x and y are equal")
+
+#Score
+if x>=90 and x<=100:
+     print("Grade: A")
+elif x>=80 and x<90:
+     print("Grade: B")
+elif x>=70 and x<80:
+    print("Grade: C")
+elif x>=60 and x<70:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+#Second way
+if 90<=x<=100:
+     print("Grade: A")
+elif 80<=x<90:
+     print("Grade: B")
+elif 70<=x<80:
+    print("Grade: C")
+elif 60<=x<70:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+#Third way
+if x>=90:
+     print("Grade: A")
+elif x>=80:
+     print("Grade: B")
+elif x>=70:
+    print("Grade: C")
+elif x>=60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+#check is it odd or even
+
+def main():
+
+    if is_even(x):
+        print("x is even")
+    else:
+        print("x is odd")
+
+def is_even(x):
+    return x%2==0
+
+name=input("What is your name ")
+if name=="Harry"or name=="Hermione" or name=="Ron": # |==or
+    print("Gryffindor")
+elif name=="Draco":
+    print("Slytherin")
+else:
+    print("Who?")
+
+#Switch is match in python
+match name:
+    case "Harry":
+       print("Gryffindor")
+    case "Ron":
+       print("Gryffindor")
+    case "Draco":
+       print("Slytherin")
+    case _:
+        print("Who?")
+
+main()
