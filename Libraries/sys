@@ -1,0 +1,16 @@
+#TYPO MAIN
+import sys
+from hello import goodbye #ACCESSING SPECIFIC FUNCTION FROM ANOTHER FILE
+if len(sys.argv) ==2: 
+    goodbye(sys.argv[1]) #SHOW ARGUMENt
+
+#FILE SAYING.py
+def main(): 
+    hello("world") 
+    goodbye("world") 
+def hello(name): 
+    print(f"Hello,{name}") 
+def goodbye(name): 
+    print(f"Goodbye,{name}") 
+if __name__  == "__main__":  #IF we do this it will not show examples
+    main()
