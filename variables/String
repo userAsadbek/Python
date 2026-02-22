@@ -1,0 +1,50 @@
+# """
+# Also comment which equal to = /* */ in C++;
+# """
+#
+# #Let's begin the journey 21.02.2026
+print ("Hello,World") # output
+name=input ("What is your name? ") # input
+print("Your name is "+name) # Like java
+print("Your name is",name) #Like java adds space by itself
+#String is str we read as stir
+
+#Given line code:
+# print(*objects,sep=' ',end='\n',file=sys.stdout, flush=False)
+# *(asterisk) object means that print function can take
+#any number of ojects , you can pass 0 strings,1,2  technically infinitely
+#sep is seperator which default adds ' '
+# end is adds new line
+
+print("Hello ",end="")
+print(name)
+print("Hello ,",name,sep=' ')
+
+#Using quotes
+print('hello,"friend "')
+print("hello,\"friend\" ")
+print(f"Hello ,{name}")
+#Special string coming by adding f
+#Print==getline , spaces  will be visible default
+
+#Remove whitespace from str
+name=name.strip()
+#Say hello to user
+print(f"Hello,{name}")
+
+#Capitalize user's name
+name=name.capitalize() #First char only
+name=name.title() #First char of each word
+
+#You can remove space and capitlize at the same time
+name=name.strip().title()
+#Can be done in this way also
+# name=input("What is your name? ").strip().title()
+
+#Say hello to user
+print(f"Hello,{name}")
+
+#Split user's name into first name and last name
+first,last=name.split(" ")
+
+print(f"Hello,{first}")
