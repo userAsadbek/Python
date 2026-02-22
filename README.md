@@ -1,2 +1,3 @@
 # Python
-All functions , things in pyton
+Python from 0 explanations
+
