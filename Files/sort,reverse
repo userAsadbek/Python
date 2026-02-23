@@ -1,0 +1,8 @@
+names=[]
+with open("names.txt") as file:
+    for line in file: # or sorted(file)
+        names.append(line.rstrip()) #print line but complex
+
+       # sorted(iterable, key=func, reverse=True)
+for name in sorted(names,reverse=True):
+    print(f"Hello,{name}")
