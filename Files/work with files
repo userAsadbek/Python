@@ -1,0 +1,28 @@
+with open("names.csv") as file:
+    for line in file:
+        row=line.rstrip().split(",") #rstrip() removes whitespace and 
+       #split() splits the line into a list using comma as a delimiter
+        print(f"{row[0]} is in {row[1]}") 
+
+students=[]
+with open("names.csv") as file:
+        for line in file:
+            name, house = line.rstrip().split(",") #unpacking the list into two variables
+            students.append(f"{name} is in {house}")
+for student in sorted(students):
+      print(student)              
+
+student1=[]
+with open("names.csv") as file:
+        for line in file:
+            name,house=line.rstrip().split(",")
+            #student["name"]=name
+            # student["house"]=house
+            student={"name":name,"house":house} #dictionary
+            student1.append(student) 
+
+def get_name(student):
+    return student["name"]
+
+for student in sorted(student1,key=get_name,reverse=True):
+      print(f"{student['name']} is in {student['house']}")   
