@@ -1,0 +1,9 @@
+import csv
+import os
+
+name=input("What's your name? ")
+home=input("Where do you live? ")
+with open("students.csv","a") as file:
+    writer=csv.writer(file)
+    writer.writerow([name,home])
+    print(os.getcwd())
