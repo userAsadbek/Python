@@ -1,0 +1,34 @@
+import re
+
+email=input("Enter your email: ")
+# . any character except newline
+# * zero or more times 
+# + 1 or more times
+# ? zero or one time
+# {m} repetitions
+# {m,n} at least m but not more than n repetitions
+# ^ start of string
+# $ end of string before newline
+# r raw string literal / read like this
+#[] set of characters
+# [^] complement of set of characters except or not in the set
+#\w word character [a-zA-Z0-9_]
+#\d decimal digit [0-9]
+#\D non-digit character [^0-9]
+#s whitespace character [ \t\n\r\f\v]
+#S non-whitespace character [^ \t\n\r\f\v]
+#W non-word character [^a-zA-Z0-9_] 
+# | either  () grouping  (?:) non-capturing group
+# re.IGNORECASE ignore case
+# re.VERBOSE ignore whitespace and comments in pattern
+# re.MULTILINE ^ and $ match the start and end of each line
+# re.DOTALL . matches any character including newline
+if re.search(r"^[a-zA-Z0-9_]+@[^@]+\.(com|edu|net|gov |org)$",email,re.IGNORECASE): #\w can be used instead of [a-zA-Z0-9_]
+    print("Valid email")
+else:
+    print("Invalid email")    
+    
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$",email,re.IGNORECASE):
+    print("Valid email")
+else:
+    print("Invalid email")
