@@ -1,0 +1,15 @@
+import re 
+
+url=input("URL: ").strip() #strip() removes leading and trailing whitespace
+# 
+# username=url.replace("https://www.twitter.com/","")
+ #replace() replaces a substring with another string
+# username=url.removeprefix("https://www.twitter.com/","")
+#removeprefix() removes a prefix from a string if it exists
+
+#re.sub(pattern,repl,string,count=0,flags=0) 
+# replaces all occurrences of a pattern with a replacement string 
+
+
+username=re.sub(r"^https?://)?(www\.)?twitter.com/","",url)
+print(f"Username: {username}") 
