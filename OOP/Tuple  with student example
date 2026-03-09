@@ -1,0 +1,28 @@
+#Tuple it is not mutable, 
+# it is a collection of items which is ordered and unchangeable. 
+# It is defined by using parentheses ().
+
+def main(): 
+     student=getStudent()
+     if student[0]=="Padma": 
+         student[1]="Ravenclaw"
+     print(f"{student[0]} from {student[1]}")
+
+     student1=getstudent()
+     print(f"{student1['name']} from {student1['house']}")
+
+def getStudent():   
+    n=input("Name: ")
+    h=input("House: ")
+    return [n,h] #returning a list instead of a tuple 
+            #(n,h) would return a tuple,
+def getstudent():   
+    student={}
+    student["name"]=input("Name: ")
+    student["house"]=input("House: ")
+    return student
+
+
+if __name__=="__main__":
+    main()     
+
