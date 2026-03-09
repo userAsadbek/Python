@@ -1,0 +1,27 @@
+class Student:
+    #raise ValueError if name is empty
+    #your own exception , and also oop 
+    def __init__(self,first,second,last,house):
+        if not first:
+            raise ValueError("Missing name")
+        if house not in ["Gryffindor","Hufflepuff","Ravenclaw","Slytherin"]:
+            raise ValueError("Invalid house")
+        self.name=name
+        self.house=house   
+        def __str__(self):
+            return f"{self.name} from {self.house}"
+
+def main():
+    student=get_student()
+    print(student)
+def get_student():
+     first=input("Name: ")
+     second=input("Name: ")
+     last=input("Name: ")
+     house=input("House: ")  
+     return Student(first, second, last, house)
+   
+
+if __name__=="__main__":
+    
+    main()
