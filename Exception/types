@@ -1,0 +1,33 @@
+
+Based on the image provided, here is the Python exception hierarchy transcribed as text:
+BaseException
++-- KeyboardInterrupt
+
++-- Exception
+
++-- ArithmeticError
+
+|   +-- ZeroDivisionError
+
++-- AssertionError
+
++-- AttributeError
+
++-- EOFError
+
++-- ImportError
+
+|   +-- ModuleNotFoundError
+
++-- LookupError
+
+|   +-- KeyError
+
++-- NameError
+
++-- SyntaxError
+
+|   +-- IndentationError
+
+
++-- ValueError
